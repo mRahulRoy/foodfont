@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/foodfont/static/css/main.bc1dca3e.css",
+    "main.js": "/foodfont/static/js/main.f3a20773.js",
+    "static/js/787.0c3f432a.chunk.js": "/foodfont/static/js/787.0c3f432a.chunk.js",
+    "static/media/khatta-meetha-johnny-lever.gif": "/foodfont/static/media/khatta-meetha-johnny-lever.d69a7e862f3bb57e1393.gif",
+    "static/media/ande-wala.gif": "/foodfont/static/media/ande-wala.134ffd34f6d66ffe780b.gif",
+    "static/media/no-no.mp4": "/foodfont/static/media/no-no.00ccf63900b2ad8be44b.mp4",
+    "static/media/hindustani-bhau-kya-soch-hai-re-teri.mp4": "/foodfont/static/media/hindustani-bhau-kya-soch-hai-re-teri.dbbc10612c899041db80.mp4",
+    "static/media/kya-bola-tune.mp4": "/foodfont/static/media/kya-bola-tune.ea4e869c828118561f32.mp4",
+    "index.html": "/foodfont/index.html",
+    "main.bc1dca3e.css.map": "/foodfont/static/css/main.bc1dca3e.css.map",
+    "main.f3a20773.js.map": "/foodfont/static/js/main.f3a20773.js.map",
+    "787.0c3f432a.chunk.js.map": "/foodfont/static/js/787.0c3f432a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc1dca3e.css",
+    "static/js/main.f3a20773.js"
+  ]
+}
