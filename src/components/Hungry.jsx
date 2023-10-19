@@ -2,11 +2,13 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import gopisNo from "../assets/no-no.mp4";
+import amitabh from "../assets/amitabh-bachchan.mp4";
 import kyaBola from "../assets/kya-bola-tune.mp4";
 import andeWalaBurger from "../assets/ande-wala.gif";
 import waah from "../assets/hindustani-bhau-kya-soch-hai-re-teri.mp4";
-import orderDoneImage from "../assets/khatta-meetha-johnny-lever.gif";
+import orderDoneImage from "../assets/thoda-sa-delay-hoga-sachin-saxena.mp4";
+import sorry from "../assets/puneet-superstar-meme-lord-puneet-meme.mp4";
+
 import axios from "axios";
 
 const Hungry = () => {
@@ -14,16 +16,22 @@ const Hungry = () => {
   const [selectedFood, setSelectedFood] = useState("");
   const [bhukadName, setBhukadName] = useState("");
   const [orderDone, setOrderDone] = useState(false);
+  const [shouldShowSorry, setShouldShowSorry] = useState(false);
 
   function handleFoodChange(e) {
     setSelectedFood(e.target.value);
   }
 
   async function handleFoodOrder() {
+    setShouldShowSorry(true)
     if (!setSelectedFood || !bhukadName) {
       toast.warning("Khana chahiye toh apna naam or food dono batao 🤭");
       return;
-    } 
+    }   
+
+    if(selectedFood === "kulhad"){
+      return;
+    }
      
       const data = await axios.post("https://fun-food.onrender.com/order", {
         foodName: selectedFood,
@@ -52,7 +60,8 @@ const Hungry = () => {
       {orderDone ? (
         <>
           <h1>Order Sucess : {bhukadName}</h1>
-          <img src={orderDoneImage} width={240} height={240} />
+          <video src={orderDoneImage} autoPlay={true} loop={true}></video>
+         
         </>
       ) : (
         <div>
@@ -72,7 +81,7 @@ const Hungry = () => {
               >
                 Yes 😋
               </button>
-              <button style={{ padding: "10px", borderRadius: "3px" }}>
+              <button style={{ padding: "10px", borderRadius: "3px" }} onClick={()=>{toast.warning("PLease khalo (In Anupansh's voice)")}}>
                 No 😐
               </button>
             </div>
@@ -174,7 +183,7 @@ const Hungry = () => {
                     />
                   </div>
                   {selectedFood === "kulhad" ? (
-                    <video src={gopisNo} autoPlay={true} loop={true}></video>
+                    <video src={shouldShowSorry ? sorry : amitabh} autoPlay={true} loop={true}></video>
                   ) : (
                     ""
                   )}
