@@ -108,20 +108,20 @@ const Hungry = () => {
                 <p>choose free food item</p>
                 <div style={{ display: "flex", gap: "60px" }}>
                   <div>
-                    <label htmlFor="burger">Burger</label>
+                    <label htmlFor="chilli-potato">Chilli Potato</label>
                     <input
                       type="checkbox"
-                      name="burger"
-                      id="burger"
-                      value={"burger"}
+                      name="chilli-potato"
+                      id="chilli-potato"
+                      value={"chilli-potato"}
                       onChange={(e) => {
                         handleFoodChange(e);
                       }}
-                      checked={selectedFood === "burger"}
+                      checked={selectedFood === "chilli-potato"}
                     />
                   </div>
 
-                  {selectedFood === "burger" ? (
+                  {selectedFood === "chilli-potato" ? (
                     <img src={andeWalaBurger} width={240} height={240} />
                   ) : (
                     ""
@@ -169,7 +169,7 @@ const Hungry = () => {
                 </div>
                 <div style={{ display: "flex", gap: "60px" }}>
                   <div>
-                    <label htmlFor="chawmin">kulhad pizza</label>
+                    <label htmlFor="chawmin">Daal chaval</label>
                     <input
                       type="checkbox"
                       name="chawmin"
